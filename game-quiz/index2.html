@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Etec Guainazes</title>
+</head>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body{
+    font-family: 'Roboto', sans-serif;
+background-color: #white;
+color: #4885ED;
+}
+
+button{
+    border-radius: 10px 10px 10px 10px;
+    color: white;
+    border:40px;
+    width: 300px;
+    height: 40px;
+    margin-top: 30px;
+}
+
+.logo{
+    margin-top: 15%;
+}
+.botão1{
+    background-color: #F4C20D; 
+}
+.botão2{
+    background-color: #DB3236;
+}
+.botão3{
+    background-color: #3CBA54;
+}
+.botão4{
+    background-color: #4885ED;
+}
+.txt{
+    margin-top: 12%;
+}
+</style>
+<body>
+
+    <center>
+        
+        
+
+    <h1> Anivesario de 15 anos da Etec Guainazes</h1>
+    	<h2 id="questao" class="txt">  </h2>
+    
+	<button class="botão1" id="q1" onclick="chamarproximapegunta(),adicionarcurso1()"></button>
+	<button class="botão2" id="q2" onclick="chamarproximapegunta(),adicionarcurso2()"></button>
+	<button class="botão3" id="q3" onclick="chamarproximapegunta(),adicionarcurso3()"></button>
+	<button class="botão4" id="q4" onclick="chamarproximapegunta(),adicionarcurso4()"></button>
+   
+</center>
+
+<center>
+    <img class="logo" src="http://www.cbtecle.com.br/media/com_jomclassifieds/items/13/etec_gallery.png" height="80">
+
+</center>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+	var numeroquestao = 0;
+	var resposta = 0 ;
+	
+	
+    function chamarproximapegunta(){
+    	numeroquestao = numeroquestao +1; 
+    	atualizarquestao();
+    }
+
+     		document.getElementById("questao").innerHTML = "Em que ano foi fundado a Etec de Guainazes ? ";
+     		document.getElementById("q1").innerHTML = "2004";
+     		document.getElementById("q2").innerHTML = "2005";
+     		document.getElementById("q3").innerHTML = "2009";
+     		document.getElementById("q4").innerHTML = "2003";
+
+
+     	 
+
+     function atualizarquestao(){
+     	if(numeroquestao == 1){document.getElementById("questao").innerHTML = "Qual deses cursos não é oferecidos pela Etec de Guainazes ?";
+     		document.getElementById("q1").innerHTML = "Informatica";
+     		document.getElementById("q2").innerHTML = "Administração";
+     		document.getElementById("q3").innerHTML = "Eletrônica";
+     		document.getElementById("q4").innerHTML = "Mecatrônica";
+     	}
+
+     	if(numeroquestao == 2){document.getElementById("questao").innerHTML = "A Etec de Guainazes desde de 2016 está sempre entre os primieors lugares na maratona de progamação ";
+            document.getElementById("q1").innerHTML = "Verdadeiro";
+            document.getElementById("q2").innerHTML = "Falso";
+            document.getElementById("q3").innerHTML = "Apenas em 2016 e 2018";
+            document.getElementById("q4").innerHTML = "Apenas em 2017 e 2018";
+     }
+     	if(numeroquestao == 3){document.getElementById("questao").innerHTML = "c";
+            document.getElementById("q1").innerHTML = "Sim";
+            document.getElementById("q2").innerHTML = "Não,Não existe nenhum ";
+            document.getElementById("q3").innerHTML = "Ç";
+            document.getElementById("q4").innerHTML = "Apenas em 2017 e 2018";
+     }
+     	if(numeroquestao == 4){document.getElementById("questao").innerHTML = "";
+            document.getElementById("q1").innerHTML = "Sim";
+            document.getElementById("q2").innerHTML = "Não,Não existe nenhum ";
+            document.getElementById("q3").innerHTML = "";
+            document.getElementById("q4").innerHTML = "Apenas em 2017 e 2018";
+     }
+     	if(numeroquestao == 5){document.getElementById("questao").innerHTML = "questao 6 ";}
+     	if(numeroquestao == 6){alert("Final do questionario, o curso que incicamos para você é...");}
+        if(numeroquestao == 7){alert("você ACERTOU X PEEGUTANS DE X");}
+     }
+
+     function adicionarcurso1(){
+     	resposta = 1;
+     	calcularcurso();
+     }
+
+      function adicionarcurso2(){
+     	resposta = 2;
+     	calcularcurso();
+     }
+      function adicionarcurso3(){
+     	resposta = 3;
+     	calcularcurso();
+     }
+      function adicionarcurso4(){
+     	resposta = 4;
+     	calcularcurso();
+     }
+      function adicionarcurso4(){
+     	resposta = 4;
+     	calcularcurso();
+     }
+
+
+
+
+
+</script>
+
+
