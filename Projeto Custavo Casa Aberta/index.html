@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:0px)" href="Css/Pequeno.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:1000px)" href="Css/Pequeno.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:1350px)" href="Css/Pequeno.css"/>
 	<title> Etec Guainazes</title>
 </head>
 
 <body>
 
     <center>
-	    
         
         
 
@@ -38,7 +38,8 @@ body{
 background-color: #white;
 color: #4885ED;
 }
-	
+
+
 button{
     border-radius: 10px 10px 10px 10px;
     color: white;
@@ -142,53 +143,63 @@ button{
      function validarresposta(){
 
         if( numeroquestao == 1 && resposta == 1 ){
-            alert ("Você acertou :)")
             audiocerto.play();
+            alert ("Você acertou :)")
+            
         }
 
         if( numeroquestao == 1 && resposta >1 ){
-            alert ("Você errou :(")
             audioerrado.play();
+            alert ("Você errou :(")
+            
         }
 
         if (numeroquestao == 2 && resposta == 4){
-            alert("Você acertou :)")
             audiocerto.play();
+            alert("Você acertou :)")
+            
         }
 
         if( numeroquestao == 2 && resposta <=3){
-            alert ("Você errou :(")
             audioerrado.play();
+            alert ("Você errou :(")
+            
         }
 
         if (numeroquestao == 3 && resposta == 3){
-            alert("Você acertou :)")
             audiocerto.play();
+            alert("Você acertou :)")
+            
         }
 
          if (numeroquestao == 3 && resposta <3){
-            alert("Você errou :(")
             audioerrado.play();
+            alert("Você errou :(")
+            
         }
 
         if (numeroquestao == 3 && resposta >3){
-            alert("Você errou :(")
             audioerrado.play();
+            alert("Você errou :(")
+            
         }
 
          if (numeroquestao == 4 && resposta == 3){
-            alert("Você acertou :)")
             audiocerto.play();
+            alert("Você acertou :)")
+            
         }
 
          if (numeroquestao == 4 && resposta <3){
-            alert("Você errou :(")
             audioerrado.play();
+            alert("Você errou :(")
+            
         }
 
         if (numeroquestao == 4 && resposta >3){
-            alert("Você errou :(")
             audioerrado.play();
+            alert("Você errou :(")
+            
         }
     }
 
