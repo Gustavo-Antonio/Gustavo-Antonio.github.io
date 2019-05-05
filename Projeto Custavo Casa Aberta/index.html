@@ -76,6 +76,7 @@ button{
     var audiocerto = new Audio("Sound/Som_Certo.mp3");
 	var numeroquestao = 0;
 	var resposta = 0;
+    var score = 0;
 
  
 	
@@ -113,11 +114,11 @@ button{
             document.getElementById("q3").innerHTML = "1500";
             document.getElementById("q4").innerHTML = "1200";
      }
-     	if(numeroquestao == 4){document.getElementById("questao").innerHTML = "A Etec de Guainazes";
-            document.getElementById("q1").innerHTML = "Sim";
-            document.getElementById("q2").innerHTML = "Não,Não existe nenhum ";
-            document.getElementById("q3").innerHTML = "";
-            document.getElementById("q4").innerHTML = "Apenas em 2017 e 2018";
+     	if(numeroquestao == 4){document.getElementById("questao").innerHTML = "Quantas medalhas do desafio robotica a Etec de Guainazes possui ? ";
+            document.getElementById("q1").innerHTML = "4";
+            document.getElementById("q2").innerHTML = "1";
+            document.getElementById("q3").innerHTML = "nenhuma";
+            document.getElementById("q4").innerHTML = "2";
      }
      	if(numeroquestao == 5){document.getElementById("questao").innerHTML = "kçkçjuojlb";
             document.getElementById("q1").innerHTML  = "c";
@@ -144,65 +145,72 @@ button{
 
         if( numeroquestao == 1 && resposta == 1 ){
             audiocerto.play();
-            alert ("Você acertou :)")
-            
+            alert ("Você acertou :)")            
         }
 
         if( numeroquestao == 1 && resposta >1 ){
             audioerrado.play();
             alert ("Você errou :(")
-            
         }
 
         if (numeroquestao == 2 && resposta == 4){
             audiocerto.play();
-            alert("Você acertou :)")
-            
+            alert("Você acertou :)")  
         }
 
         if( numeroquestao == 2 && resposta <=3){
             audioerrado.play();
-            alert ("Você errou :(")
-            
+            alert ("Você errou :(")    
         }
 
         if (numeroquestao == 3 && resposta == 3){
             audiocerto.play();
             alert("Você acertou :)")
-            
         }
 
          if (numeroquestao == 3 && resposta <3){
             audioerrado.play();
             alert("Você errou :(")
-            
         }
 
         if (numeroquestao == 3 && resposta >3){
             audioerrado.play();
             alert("Você errou :(")
-            
         }
 
          if (numeroquestao == 4 && resposta == 3){
             audiocerto.play();
             alert("Você acertou :)")
-            
         }
 
          if (numeroquestao == 4 && resposta <3){
             audioerrado.play();
-            alert("Você errou :(")
-            
+            alert("Você errou :(")   
         }
 
         if (numeroquestao == 4 && resposta >3){
             audioerrado.play();
-            alert("Você errou :(")
-            
+            alert("Você errou :(")  
+        }
+
+        if (numeroquestao == 5 && resposta ==1){
+            audiocerto.play();
+            alert("Você acertou :(")  
+        }
+
+         if (numeroquestao == 5 && resposta >1){
+            audioerrado.play();
+            alert("Você errou :(")  
+        }
+         if (numeroquestao == 6 && resposta ==4){
+            audiocerto.play();
+            alert("Você acertou :(")  
+        }
+
+         if (numeroquestao == 6 && resposta <4){
+            audioerrado.play();
+            alert("Você errou :(")  
         }
     }
 
 </script>
-
-
