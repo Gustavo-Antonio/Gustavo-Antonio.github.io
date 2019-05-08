@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
-	<title> Etec Guainazes</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title> Etec Guaianazes</title>
 </head>
 
 <body>
-
     <center>
-        
-      <div class="col-md-11 col-sm-12 col-xs-12"> 
-      <div class="col-md-11 col-sm-12 col-xs-12">
-      <div class="col-md-11 col-sm-12 col-xs-12">
-      <div class="col-md-11 col-sm-12 col-xs-12">
+    <div class="row">
+       
+      <div class="col-md-12 col-sm-12 col-xs-12"> 
+            <h1 class="txt1" > Anivesario de 15 anos da Etec Guaianazes</h1>
+        <h2 id="questao" class="txt">  </h2>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+            <button class="botão1" id="q1" onclick="chamarproximapegunta(),adicionarcurso1(),validarresposta();"></button> 
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <button class="botão2" id="q2" onclick="chamarproximapegunta(),adicionarcurso2(),validarresposta();"></button>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <button class="botão3" id="q3" onclick="chamarproximapegunta(),adicionarcurso3(),validarresposta();"></button>
+      </div>
 
-
-    <h1 class="txt1" > Anivesario de 15 anos da Etec Guainazes</h1>
-    	<h2 id="questao" class="txt">  </h2>
-    
-	<button class="botão1" id="q1" onclick="chamarproximapegunta(),adicionarcurso1(),validarresposta();"></button> 
-	<button class="botão2" id="q2" onclick="chamarproximapegunta(),adicionarcurso2(),validarresposta();"></button>
-	<button class="botão3" id="q3" onclick="chamarproximapegunta(),adicionarcurso3(),validarresposta();"></button>
-	<button class="botão4" id="q4" onclick="chamarproximapegunta(),adicionarcurso4(),validarresposta();"></button>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+            <button class="botão4" id="q4" onclick="chamarproximapegunta(),adicionarcurso4(),validarresposta();"></button>
+      </div>
    
-</center>
+
+</div>
+
+
+    </center>
+
+	
+	
+
+   
+
 
 <center>
     <img class="logo" src="saraiva.jpg" height="100">
@@ -33,6 +47,10 @@
 </body>
 </html>
 <style type="text/css">
+
+.row{
+    width: 90%
+}
 
 body{
     font-family: Brush Script MT
@@ -89,7 +107,7 @@ button{
     	numeroquestao = numeroquestao +1; 
     	atualizarquestao();
     }
-            if (numeroquestao == 0){document.getElementById("questao").innerHTML = "Em que ano foi fundado a Etec de Guainazes ? ";
+            if (numeroquestao == 0){document.getElementById("questao").innerHTML = "Em que ano foi fundado a Etec de Guaianazes ? ";
      		document.getElementById("q1").innerHTML = "2004";
      		document.getElementById("q2").innerHTML = "2005"; 
      		document.getElementById("q3").innerHTML = "2009"; 
@@ -98,7 +116,7 @@ button{
 
      function atualizarquestao(){
 
-     	if  (numeroquestao == 1){document.getElementById("questao").innerHTML = "Qual deses cursos não é oferecido pela Etec de Guainazes ?";
+     	if  (numeroquestao == 1){document.getElementById("questao").innerHTML = "Qual deses cursos não é oferecido pela Etec de Guaianazes ?";
      		document.getElementById("q1").innerHTML = "Informatica" ; 
      		document.getElementById("q2").innerHTML = "Administração";
      		document.getElementById("q3").innerHTML = "Eletrônica";
@@ -106,30 +124,30 @@ button{
         }
            
         
-     	if(numeroquestao == 2){document.getElementById("questao").innerHTML = "É verdade que a Etec de Guainazes desde de 2016 está sempre entre os primeiros lugares na maratona de progamação ?";
+     	if(numeroquestao == 2){document.getElementById("questao").innerHTML = "É verdade que a Etec de Guaianazes desde de 2016 está sempre entre os primeiros lugares na maratona de progamação ?";
             document.getElementById("q1").innerHTML = "Apenas em 2016 e 2018";
             document.getElementById("q2").innerHTML = "Falso";
             document.getElementById("q3").innerHTML = "Verdadeiro";
             document.getElementById("q4").innerHTML = "Apenas em 2017 e 2018";
 
      }
-     	if(numeroquestao == 3){document.getElementById("questao").innerHTML = "Aproximadamente quantos alunos estudam atualmente na Etec de Guainazes ? ";
+     	if(numeroquestao == 3){document.getElementById("questao").innerHTML = "Aproximadamente quantos alunos estudam atualmente na Etec de Guaianazes ? ";
             document.getElementById("q1").innerHTML = "720";
             document.getElementById("q2").innerHTML = "1000";
             document.getElementById("q3").innerHTML = "1500";
             document.getElementById("q4").innerHTML = "1200";
      }
-     	if(numeroquestao == 4){document.getElementById("questao").innerHTML = "Quantas medalhas do desafio robotica a Etec de Guainazes possui ? ";
+     	if(numeroquestao == 4){document.getElementById("questao").innerHTML = "Quantas medalhas do desafio robotica a Etec de Guaianazes possui ? ";
             document.getElementById("q1").innerHTML = "4";
             document.getElementById("q2").innerHTML = "1";
-            document.getElementById("q3").innerHTML = "nenhuma";
+            document.getElementById("q3").innerHTML = "Nenhuma";
             document.getElementById("q4").innerHTML = "2";
      }
-     	if(numeroquestao == 5){document.getElementById("questao").innerHTML = "kçkçjuojlb";
-            document.getElementById("q1").innerHTML  = "c";
-            document.getElementById("q2").innerHTML  = "h";
-            document.getElementById("q3").innerHTML  = "jk";
-            document.getElementById("q4").innerHTML  = "oj";
+     	if(numeroquestao == 5){document.getElementById("questao").innerHTML = "É verdade que a Etec de Guaianazes é o unico polo de robotica em São Paulo";
+            document.getElementById("q1").innerHTML  = "Verdade";
+            document.getElementById("q2").innerHTML  = "Mentira";
+            document.getElementById("q3").innerHTML  = "Todas Etecs possuim polo de robotica";
+            document.getElementById("q4").innerHTML  = "Apenas a Etec de ";
      }
  }
 
@@ -227,3 +245,7 @@ button{
     }
 
 </script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
