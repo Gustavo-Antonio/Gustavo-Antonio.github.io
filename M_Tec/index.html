@@ -140,7 +140,7 @@ button{
             document.getElementById("q3").innerHTML = "Nenhuma";
             document.getElementById("q4").innerHTML = "2";
      }
-     	if(numeroquestao == 5){document.getElementById("questao").innerHTML = "É verdade que a Etec de Guaianazes é o unico polo de robotica em São Paulo ?";
+     	if(numeroquestao == 5){document.getElementById("questao").innerHTML = "É verdade que a Etec de Guaianazes é a unica com polo de robotica em São Paulo ?";
             document.getElementById("q1").innerHTML  = "Apenas a Etec De Itaquera";
             document.getElementById("q2").innerHTML  = "Mentira";
             document.getElementById("q3").innerHTML  = "Todas Etecs possuim polo de robotica";
@@ -235,7 +235,7 @@ button{
         }
          if (numeroquestao == 6 && resposta ==4){
             audiocerto.play();
-            alert("Você acertou :(");
+            alert("Você acertou :)");
             score = 1 + score;
         }
 
@@ -248,19 +248,19 @@ button{
             alert("Você acertou :)");
             score = 1 + score
             audiofinal.play();
-            alert ("Você acertou " + score);
+            alert ("Você acertou " + score + " questões");
         }
          if (numeroquestao == 7 && resposta >2){
             audioerrado.play();
             alert("Você errou :(");
             audiofinal.play();
-            alert ("Você acertou " + score);
+            alert ("Você acertou " + score + " questões");
         }
-           if (numeroquestao == 7 && resposta <2){
+         if (numeroquestao == 7 && resposta <2){
             audioerrado.play();
             alert("Você errou :(");
             audiofinal.play();
-            alert ("Você acertou " + score);
+            alert ("Você acertou " + score + " questões");
         }
     }
 
