@@ -147,8 +147,8 @@ button{
             document.getElementById("q4").innerHTML  = "Verdade";
     }
             if(numeroquestao == 6){document.getElementById("questao").innerHTML = "Quais são as extensões da Etec de Guaianazes ?";
-            document.getElementById("q1").innerHTML  = "CEU Lajeado e Jambeiro";
-            document.getElementById("q2").innerHTML  = "Apenas CEU Lajeado";
+            document.getElementById("q1").innerHTML  = "Apenas CEU Lajeado";
+            document.getElementById("q2").innerHTML  = "CEU Lajeado e Jambeiro";
             document.getElementById("q3").innerHTML  = "Apenas CEU Jambeiro";
             document.getElementById("q4").innerHTML  = "Essa Etec não possui extensões ";
      }
@@ -242,16 +242,21 @@ button{
          if (numeroquestao == 6 && resposta <4){
             audioerrado.play();
             alert("Você errou :(");
-            audiofinal.play();
         }
-        if (numeroquestao == 7 && resposta == 1){
+        if (numeroquestao == 7 && resposta == 2){
             audiocerto.play();
             alert("Você acertou :)");
             score = 1 + score
             audiofinal.play();
             alert ("Você acertou " + score);
         }
-         if (numeroquestao == 7 && resposta >1){
+         if (numeroquestao == 7 && resposta >2){
+            audioerrado.play();
+            alert("Você errou :(");
+            audiofinal.play();
+            alert ("Você acertou " + score);
+        }
+           if (numeroquestao == 7 && resposta <2){
             audioerrado.play();
             alert("Você errou :(");
             audiofinal.play();
