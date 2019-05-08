@@ -145,6 +145,12 @@ button{
             document.getElementById("q2").innerHTML  = "Mentira";
             document.getElementById("q3").innerHTML  = "Todas Etecs possuim polo de robotica";
             document.getElementById("q4").innerHTML  = "Verdade";
+    }
+            if(numeroquestao == 5){document.getElementById("questao").innerHTML = "Quais são as extensões da Etec de Guaianazes ?";
+            document.getElementById("q1").innerHTML  = "CEU Lajeado e Jambeiro";
+            document.getElementById("q2").innerHTML  = "Apenas CEU Lajeado";
+            document.getElementById("q3").innerHTML  = "Apenas CEU Jambeiro";
+            document.getElementById("q4").innerHTML  = "Essa Etec não possui extensões ";
      }
  }
 
@@ -235,6 +241,18 @@ button{
         }
 
          if (numeroquestao == 6 && resposta <4){
+            audioerrado.play();
+            alert("Você errou :(");
+            audiofinal.play();
+            alert ("Você acertou " + score);
+        }
+        if (numeroquestao == 7 && resposta ==1){
+            audioerrado.play();
+            alert("Você errou :(");
+            audiofinal.play();
+            alert ("Você acertou " + score);
+        }
+         if (numeroquestao == 7 && resposta >1){
             audioerrado.play();
             alert("Você errou :(");
             audiofinal.play();
