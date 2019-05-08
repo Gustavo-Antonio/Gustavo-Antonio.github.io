@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+	<title> Etec Guaianazes</title>
+</head>
+
+<body>
+<div class="container-fluid">
+        <div class="row  main-row" >
+      <div class="col-md-12 col-sm-12 col-xs-7"> 
+        <center>
+            <h1 class="txt1" > Anivesario de 15 anos da Etec Guaianazes</h1>
+        <h2 id="questao" class="txt">  </h2>
+        </center>
+      </div>
+      <div class=" col-sm-12 col-md-10  col-lg-3 col-xs-12">
+        <center>
+            <button class="botão1" id="q1" onclick="chamarproximapegunta(),adicionarcurso1(),validarresposta();"></button> 
+        </center>
+      </div>
+      <div class=" col-sm-12 col-md-10  col-lg-3 col-xs-12">
+        <center>
+        <button class="botão2" id="q2" onclick="chamarproximapegunta(),adicionarcurso2(),validarresposta();"></button>
+        </center>
+      </div>
+      <div class="col-sm-12 col-md-10  col-lg-3 col-xs-12">
+         <center>  
+        <button class="botão3" id="q3" onclick="chamarproximapegunta(),adicionarcurso3(),validarresposta();"></button>
+    </center>
+      </div>
+
+       <div class=" col-sm-12 col-md-10  col-lg-3 col-xs-12">
+        <center>
+            <button class="botão4" id="q4" onclick="chamarproximapegunta(),adicionarcurso4(),validarresposta();"></button>
+            </center>
+      </div>
+
+</div>
+
+<center>
+    <img class="logo" src="saraiva.jpg" height="100" style="margin-top: 7%; margin-left: -5%;">
+
+</center>
+
+</body>
+</html>
+<style type="text/css">
+
+body{
+    font-family: Brush Script MT
+background-color: #white;
+color: #4885ED;
+
+}
+
+button{
+    border-radius: 10px;
+    color: white;
+    border:40px;
+    width: 300px;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 15%;
+}   
+
+.logo{
+    margin-top: 14%;
+}
+.botão1{
+    background-color: #F4C20D; 
+}
+.botão2{
+    background-color: #DB3236;
+}
+.botão3{
+    background-color: #3CBA54;
+}
+.botão4{
+    background-color: #4885ED;
+}
+.txt{
+    margin-top: 12%;
+}
+.txt1{
+    margin-top: 30px;
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+    var audioerrado = new Audio("Sound/Som_Errado.mp3");
+    var audiocerto =  new Audio("Sound/Som_Certo.mp3");
+    var audiofinal = new Audio("Sound/Som_Final.mp3");
+	var numeroquestao = 0;
+	var resposta = 0;
+    var score = 0;
+
+ 
+	
+    function chamarproximapegunta(){
+    	numeroquestao = numeroquestao +1; 
+    	atualizarquestao();
+    }
+            if (numeroquestao == 0){document.getElementById("questao").innerHTML = "Em que ano foi fundado a Etec de Guaianazes ? ";
+     		document.getElementById("q1").innerHTML = "2004";
+     		document.getElementById("q2").innerHTML = "2005"; 
+     		document.getElementById("q3").innerHTML = "2009"; 
+     		document.getElementById("q4").innerHTML = "2003";
+        }
+
+     function atualizarquestao(){
+
+     	if  (numeroquestao == 1){document.getElementById("questao").innerHTML = "Qual deses cursos não é oferecido pela Etec de Guaianazes ?";
+     		document.getElementById("q1").innerHTML = "Informatica" ; 
+     		document.getElementById("q2").innerHTML = "Administração";
+     		document.getElementById("q3").innerHTML = "Eletrônica";
+     		document.getElementById("q4").innerHTML = "Mecatrônica";
+        }
+           
+        
+     	if(numeroquestao == 2){document.getElementById("questao").innerHTML = "É verdade que a Etec de Guaianazes desde de 2016 está sempre entre os primeiros lugares na maratona de progamação ?";
+            document.getElementById("q1").innerHTML = "Apenas em 2016 e 2018";
+            document.getElementById("q2").innerHTML = "Falso";
+            document.getElementById("q3").innerHTML = "Verdadeiro";
+            document.getElementById("q4").innerHTML = "Apenas em 2017 e 2018";
+
+     }
+     	if(numeroquestao == 3){document.getElementById("questao").innerHTML = "Aproximadamente quantos alunos estudam atualmente na Etec de Guaianazes ? ";
+            document.getElementById("q1").innerHTML = "720";
+            document.getElementById("q2").innerHTML = "1000";
+            document.getElementById("q3").innerHTML = "1500";
+            document.getElementById("q4").innerHTML = "1200";
+     }
+     	if(numeroquestao == 4){document.getElementById("questao").innerHTML = "Quantas medalhas do desafio robotica a Etec de Guaianazes possui ? ";
+            document.getElementById("q1").innerHTML = "4";
+            document.getElementById("q2").innerHTML = "1";
+            document.getElementById("q3").innerHTML = "Nenhuma";
+            document.getElementById("q4").innerHTML = "2";
+     }
+     	if(numeroquestao == 5){document.getElementById("questao").innerHTML = "É verdade que a Etec de Guaianazes é o unico polo de robotica em São Paulo ?";
+            document.getElementById("q1").innerHTML  = "Apenas a Etec De Itaquera";
+            document.getElementById("q2").innerHTML  = "Mentira";
+            document.getElementById("q3").innerHTML  = "Todas Etecs possuim polo de robotica";
+            document.getElementById("q4").innerHTML  = "Verdade";
+    }
+            if(numeroquestao == 6){document.getElementById("questao").innerHTML = "Quais são as extensões da Etec de Guaianazes ?";
+            document.getElementById("q1").innerHTML  = "Apenas CEU Lajeado";
+            document.getElementById("q2").innerHTML  = "CEU Lajeado e Jambeiro";
+            document.getElementById("q3").innerHTML  = "Apenas CEU Jambeiro";
+            document.getElementById("q4").innerHTML  = "Essa Etec não possui extensões ";
+     }
+ }
+
+      function adicionarcurso1(){
+        resposta = 1;    
+     }
+      function adicionarcurso2(){
+        resposta = 2; 
+    }
+      function adicionarcurso3(){
+     	resposta = 3; 
+     }
+      function adicionarcurso4(){
+     	resposta = 4; 
+     }
+
+     function validarresposta(){
+
+        if( numeroquestao == 1 && resposta == 1 ){
+            audiocerto.play();
+            alert ("Você acertou :)");   
+            score = 1  + score;       
+        }
+
+        if( numeroquestao == 1 && resposta >1 ){
+            audioerrado.play();
+            alert ("Você errou :(");
+        }
+
+        if (numeroquestao == 2 && resposta == 4){
+            audiocerto.play();
+            alert("Você acertou :)"); 
+            score = 1 + score;
+        }
+
+        if( numeroquestao == 2 && resposta <=3){
+            audioerrado.play();
+            alert ("Você errou :(");   
+        }
+
+        if (numeroquestao == 3 && resposta == 3){
+            audiocerto.play();
+            alert("Você acertou :)");
+            score = 1 + score;
+        }
+
+         if (numeroquestao == 3 && resposta <3){
+            audioerrado.play();
+            alert("Você errou :(");
+        }
+
+        if (numeroquestao == 3 && resposta >3){
+            audioerrado.play();
+            alert("Você errou :(");
+        }
+
+         if (numeroquestao == 4 && resposta == 3){
+            audiocerto.play();
+            alert("Você acertou :)");
+            score = 1 + score;
+        }
+
+         if (numeroquestao == 4 && resposta <3){
+            audioerrado.play();
+            alert("Você errou :(");  
+        }
+
+        if (numeroquestao == 4 && resposta >3){
+            audioerrado.play();
+            alert("Você errou :(");
+        }
+
+        if (numeroquestao == 5 && resposta ==1){
+            audiocerto.play();
+            alert("Você acertou :)"); 
+            score = 1 + score;
+        }
+
+         if (numeroquestao == 5 && resposta >1){
+            audioerrado.play();
+            alert("Você errou :(");
+        }
+         if (numeroquestao == 6 && resposta ==4){
+            audiocerto.play();
+            alert("Você acertou :(");
+            score = 1 + score;
+        }
+
+         if (numeroquestao == 6 && resposta <4){
+            audioerrado.play();
+            alert("Você errou :(");
+        }
+        if (numeroquestao == 7 && resposta == 2){
+            audiocerto.play();
+            alert("Você acertou :)");
+            score = 1 + score
+            audiofinal.play();
+            alert ("Você acertou " + score);
+        }
+         if (numeroquestao == 7 && resposta >2){
+            audioerrado.play();
+            alert("Você errou :(");
+            audiofinal.play();
+            alert ("Você acertou " + score);
+        }
+           if (numeroquestao == 7 && resposta <2){
+            audioerrado.play();
+            alert("Você errou :(");
+            audiofinal.play();
+            alert ("Você acertou " + score);
+        }
+    }
+
+</script>
