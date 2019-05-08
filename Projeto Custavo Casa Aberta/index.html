@@ -1,64 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
 	<title> Etec Guaianazes</title>
 </head>
 
 <body>
-
-
-    <div class="row" >
-       
-      <div class="col-12 col-sm-12 col-md-12 text" "> 
-
+<div class="container-fluid">
+        <div class="row  main-row" >
+      <div class="col-md-12 col-sm-12 col-xs-7"> 
+        <center>
             <h1 class="txt1" > Anivesario de 15 anos da Etec Guaianazes</h1>
         <h2 id="questao" class="txt">  </h2>
+        </center>
       </div>
-      <div class="col-12 col-sm-12 col-md-3">
+      <div class=" col-sm-12 col-md-10  col-lg-3 col-xs-12">
+        <center>
             <button class="botão1" id="q1" onclick="chamarproximapegunta(),adicionarcurso1(),validarresposta();"></button> 
+        </center>
       </div>
-      <div class="col-12 col-sm-12 col-md-3">
+      <div class=" col-sm-12 col-md-10  col-lg-3 col-xs-12">
+        <center>
         <button class="botão2" id="q2" onclick="chamarproximapegunta(),adicionarcurso2(),validarresposta();"></button>
+        </center>
       </div>
-      <div class="col-12 col-sm-12 col-md-3">
+      <div class="col-sm-12 col-md-10  col-lg-3 col-xs-12">
+         <center>  
         <button class="botão3" id="q3" onclick="chamarproximapegunta(),adicionarcurso3(),validarresposta();"></button>
+    </center>
       </div>
 
-      <div class="col-12 col-sm-12 col-md-3">
+       <div class=" col-sm-12 col-md-10  col-lg-3 col-xs-12">
+        <center>
             <button class="botão4" id="q4" onclick="chamarproximapegunta(),adicionarcurso4(),validarresposta();"></button>
+            </center>
       </div>
-   
 
 </div>
 
-
-
-
-	
-	
-
-   
-
-
 <center>
-    <img class="logo" src="saraiva.jpg" height="100">
+    <img class="logo" src="saraiva.jpg" height="100" style="margin-top: 7%; margin-left: -5%;">
 
 </center>
 
 </body>
 </html>
 <style type="text/css">
-
-.text{
-    margin-left: 20%;
-    width: 3px;
-}
-
-.row{
-    margin-left: 5%;
-    width: 90%
-}
 
 body{
     font-family: Brush Script MT
@@ -74,6 +61,7 @@ button{
     width: 300px;
     height: 40px;
     margin-top: 30px;
+    margin-left: 15%;
 }   
 
 .logo{
@@ -104,7 +92,7 @@ button{
 <script type="text/javascript">
 
     var audioerrado = new Audio("Sound/Som_Errado.mp3");
-    var audiocerto = new Audio("Sound/Som_Certo.mp3");
+    var audiocerto =  new Audio("Sound/Som_Certo.mp3");
 	var numeroquestao = 0;
 	var resposta = 0;
     var score = 0;
@@ -152,10 +140,10 @@ button{
             document.getElementById("q4").innerHTML = "2";
      }
      	if(numeroquestao == 5){document.getElementById("questao").innerHTML = "É verdade que a Etec de Guaianazes é o unico polo de robotica em São Paulo";
-            document.getElementById("q1").innerHTML  = "Verdade";
+            document.getElementById("q1").innerHTML  = "Apenas a Etec De Itaquera";
             document.getElementById("q2").innerHTML  = "Mentira";
             document.getElementById("q3").innerHTML  = "Todas Etecs possuim polo de robotica";
-            document.getElementById("q4").innerHTML  = "Apenas a Etec de ";
+            document.getElementById("q4").innerHTML  = "Verdade";
      }
  }
 
@@ -253,7 +241,3 @@ button{
     }
 
 </script>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
