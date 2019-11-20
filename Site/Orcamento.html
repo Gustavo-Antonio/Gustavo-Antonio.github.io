@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"></link>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+	
+</head>
+<title>Orcamento</title>
+<link rel="shortcut icon" href="Img/Logo2.png">
+<body>
+<nav>
+		<div class="nav-wrapper">
+			<a href="Index.html" style="right:10px; position: relative;"> <img src="Img/Logo3.png" class="col-lg-1"> </a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="Produtos2.html">Hospedagem</a></li>
+				<li><a href="Produtos.html">Passagem & Hospedagem</a></li>
+				<li><a href="Quem_Somos.html">Quem_Somos</a></li>
+				<li><a href="Fale_Conosco.html">Fale Conosco</a></li>
+				
+			</ul>
+		</div>
+	</nav>
+
+	<img src="Img/Logo2.png" style="width: 20%; margin-left:38%; margin-top: 2%;">
+	<h3 class=" jumper7">Login ou Registro</h3>
+	<div class="jumper">
+	<div class="container">
+		<form class="col-lg-7 col-sm-7 col-ms-7 col-xs-7">
+			<fieldset id="user"><legend>Identificação</legend>
+				<p><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="10" maxlength="50" placeholder="Seu nome" ></p>
+				<p><label for="cSenha"> Senha:</label><input type="password" name="tSenha" id="cSenha" size="10" maxlength="20" placeholder="Senha"></p>
+				<p><label for="cEmail"> Senha:</label><input type="email" name="tEmail" id="cEmail"></p>
+				<p><label for="cNascto">Data de Nascimento:</label><input type="date" name="tNascto" id="cNascto">
+
+
+					<fieldset id="sexo"><legend>Sexo</legend>
+						<input type="radio" name="tSexo" id="cMasc"><label for="cMasc">Masculino</label>
+						<input type="radio" name="tSexo" id="cFem"><label for="cFem">Feminino</label>
+					</fieldset>
+
+
+					<fieldset id="endereco"><legend>Endereço</legend>
+						<p><label for="cRua">Logradouro:</label><input type="text" name="tRua" id="cRua" size="10" maxlength="50" placeholder="Rua, Avenida..."></p>
+
+						<p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="0" max="99999" ></p>
+
+						<p><label for="cEst">Estados:</label>
+							<select name="tEst" id="cEst">
+
+								<option>Santa Catarina</option>
+								<option>Paraná</option>
+								<option>Rio Grande do Sul</option>
+								<option>São Paulo</option>
+								<option>Minas Gerais</option>
+								<option>Rio de Janeiro</option>
+
+							</select>
+						</p>
+
+					</fieldset>
+
+
+					<fieldset><legend>Avaliação do site</legend>
+						<p><label for="cUrg">Nota:</label>
+							<br>
+							<label>Ruim</label>
+							<input type="range" name="tUrg" id="cUrg" min="0" max="9">
+							<label>Bom</label>
+						</p>
+
+						<p>
+							<label>Mensagem:</label>
+							<textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui alguma mensagem"></textarea>
+						</p>
+
+					</fieldset>
+
+					<button type="submit" class="btn btn-primary">Enviar</button>
+				</p>
+			</fieldset>
+		</form>
+	</div>
+</div>
+					<div class= "jumper5">
+						<footer style=" background-color: #ff9f82;">
+							<img src="Img/5.svg" width="60" class=" tamanho gamis">
+							<img src="Img/6.svg" width="60" height="100" style="margin-top: 3%; margin-left: 1%;">
+							<img src="Img/7.svg" width="60" class=" tamanho">
+							<img src="Img/8.svg" width="60" class=" tamanho">
+							<h5 style="margin-left: 35%; color: black; margin-top: -1%;" >Copyright © André Maximo & Gustavo Antonio</h5>
+						</footer>
+					</body>
+					</html>
+					<style type="text/css">
+
+						nav{
+							padding: 0px 20px;
+						}
+						nav li  a:hover{
+							background-color: skyblue;
+						}
+						.jumper{
+							margin-top: 5%;
+							margin-left: 30%;
+						}
+						.jumper5{
+							margin-top: 5%;
+						}
+						.tamanho{
+							margin-top: 3%;
+							margin-left: 1%;
+						}
+						.jumper7{
+							margin-left: 41%;
+							margin-top: 1%;
+						}
+						.gamis{
+							margin-left: 38%;
+						}
+
+					</style>
