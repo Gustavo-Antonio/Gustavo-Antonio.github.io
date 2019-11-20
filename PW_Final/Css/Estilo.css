@@ -1,58 +1,40 @@
 body {
-		margin: 0px;
-		background: #1b1d20;
-	}
+	width: 100%;
+	margin: 0px;
+	background: #212326;
+}
 
-	h1, h2, a {
-		font-family: "Rubik", Helvetica, Arial, sans-serif;
-		color: white;
-		font-weight: normal;
-	}
-	p {
-		font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
-		font-size: 1em;
-		line-height: 1.5em;
-		color: #b0b2b3;
-	}
-	footer{
-		background: #6d19e3;
-		width: 100%;
-		height: 150px;
-	}
-	.livro{
-		opacity: 1;
-		display: block;
-		width: 100%;
-		height: auto;
-		transition: 5s ease;
-		backface-visibility: hidden;
-	}
+h1, h2,h3, a {
+	font-family: "Rubik", Helvetica, Arial, sans-serif;
+	color: white;
+	font-weight: normal;
+}
 
-
-	.jumper{
-		margin-top: 5%;
-	}
-	.jumper1{
-		margin-top: 5%;
-		margin-left: 7%;
-	}
-	.jumper2{
-		margin-top: 5%;
-		margin-left: 5%;
-
-	}
-	.jumper3{
-		margin-top: 5%;
-	}
-
-	@media (max-width:992px) {
-		.jumper2{	
-			margin-left: 0%;
-			margin-top: 5%;
-		}
-	}
+p {
+	font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.5em;
+	color: #b0b2b3;
+}
+footer{
+	background: #6d19e3;
+	width: 100%;
+	height: 150px;
+}
+.livro{
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: 5s ease;
+	backface-visibility: hidden;
+}
 
 
-
-
-
+.jumper{
+	margin-top: 5%;
+}
+.jumper1{
+	margin-top: 5%;
+	margin-left: 7%;
+}
