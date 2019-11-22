@@ -23,9 +23,12 @@ footer{
 }
 
 .tamanho{
-	height: 400px;
-	width: 1000px;
+
+	height: 700px;
+
 }
+
+
 .livro{
 	position: relative;
 }
@@ -60,6 +63,10 @@ footer{
 	color: white;
 	font-size: 16px;
 }
+.texto3{
+	color: yellow;
+	font-size: 16px;
+}
 .livro:hover .image {
 	opacity: 0.3;
 }
@@ -75,4 +82,18 @@ footer{
 .jumper1{
 	margin-top: 5%;
 	margin-left: 7%;
+
+}
+
+
+
+::-webkit-scrollbar-track {
+background-color: #41454a;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: #41454a;
+}
+::-webkit-scrollbar-thumb {
+    background: #212326;
 }
