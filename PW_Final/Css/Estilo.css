@@ -4,7 +4,7 @@ body {
 	background: #212326;
 }
 
-h1, h2,h3, a {
+h1,h2,h3,a {
 	font-family: "Rubik", Helvetica, Arial, sans-serif;
 	color: white;
 	font-weight: normal;
@@ -16,6 +16,9 @@ p {
 	line-height: 1.5em;
 	color: #b0b2b3;
 }
+h6{
+	color: white;
+}
 footer{
 	background: #6d19e3;
 	width: 100%;
@@ -23,12 +26,38 @@ footer{
 }
 
 .tamanho{
-
 	height: 700px;
-
 }
+.tamanho2{
+	width: 7	00;
+	height: 300px;
+}
+label{
+	font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
+	font-size: 1.3em;
+	line-height: 1.5em;
+	color: #b0b2b3;
+}
+input[type=text]{
+ border-radius:4px;
+ font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
+ }
 
 
+th{
+	background-color: 
+	font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
+	font-size: 1.3em;
+	line-height: 1.5em;
+	color: #b0b2b3;
+}
+tr{
+	color: white;
+	background-color:white. 
+}
+.botao{
+	border-radius: 8px;
+}
 .livro{
 	position: relative;
 }
@@ -67,6 +96,9 @@ footer{
 	color: yellow;
 	font-size: 16px;
 }
+.texto4	{
+	color: yellow;		
+}
 .livro:hover .image {
 	opacity: 0.3;
 }
@@ -74,7 +106,29 @@ footer{
 .livro:hover .middle {
 	opacity: 1;
 }
+.comprar{
+	position: relative;
+}
+.comprar:hover{
+	color: #6d19e3;
+	text-decoration: none;
+}
 
+.veja-mais{
+	position: relative;
+}
+.veja-mais:hover{
+	text-decoration: none;
+	color: #16102b;
+}
+.input1{
+	color: white;
+	font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
+}
+.forma{
+	margin-left: 4%;
+	border-radius: 8px;
+}
 
 .jumper{
 	margin-top: 5%;
@@ -84,16 +138,23 @@ footer{
 	margin-left: 7%;
 
 }
+.jumper3{
+	margin-top: 5%;
+
+}
+.jumper4{
+	margin-left: 5%;
+}
 
 
 
 ::-webkit-scrollbar-track {
-background-color: #41454a;
+	background-color: #41454a;
 }
 ::-webkit-scrollbar {
-    width: 6px;
-    background: #41454a;
+	width: 6px;
+	background: #41454a;
 }
 ::-webkit-scrollbar-thumb {
-    background: #212326;
+	background: #212326;
 }
