@@ -13,8 +13,21 @@
 
 
 
-
 			<script type="text/javascript">
+				function parcely(){
+					var indice = parseInt(document.formVenda.slcFormaPagto.selectedIndex);
+					var indice2 = document.formVenda.numParcela.selectedIndex;
+					if(document.formVenda.slcFormPagto[indice].value == 2  && document.formVenda.numParcela[indice2].value>1){
+						alert("Você não pode parcelar transferência ");
+						window.location.reload();
+					}
+					if(document.formVenda.slcFormPagto[indice].value == 1  && document.formVenda.numParcela[indice2].value>1){
+						alert("Você não pode parcelar boleto ");
+						window.location.reload();
+					}
+				}
+
+
 				var valorTotal = 0;
 				function salvar(){
 					document.getElementById('txtNomeCliente').value = document.getElementById('txtNome').value;
@@ -25,170 +38,210 @@
 							break;
 					}
 					if(parseInt(document.formVenda.rdEntrega[i].value) == 1){
-						document.getElementById('txtEntregaSelec').value = "Correios - entrega em 10 dias uteis";
+						document.getElementById('txtEntregaSelec').value = "Correios - entrega em 7 dias uteis";
 						valorTotal = parseInt(valorTotal) + parseInt(10);
+						document.getElementById('txtFrete').value = '10,00 R$';
 					}
 					else if(parseInt(document.formVenda.rdEntrega[i].value) == 2){
-						document.getElementById('txtEntregaSelec').value = "Personalizado - entrega em 1 dias uteis";
-						valorTotal = parseInt(valorTotal) + parseInt(15);
+						document.getElementById('txtEntregaSelec').value = "SEDEX - entrega em 3 dias uteis";
+						valorTotal = parseInt(valorTotal) + parseInt(25);
+						document.getElementById('txtFrete').value = '25,00 R$';
 					}
 					else if(parseInt(document.formVenda.rdEntrega[i].value) == 3){
 						document.getElementById('txtEntregaSelec').value = "Retirar - retirar no endereçõe enviado ao seu email";
-						valorTotal = parseInt(valorTotal) + parseInt(5);
+						valorTotal = parseInt(valorTotal) + parseInt(9);
+						document.getElementById('txtFrete').value = '09,00 R$';
 
 					}
+					var indice2 = document.formVenda.numParcela.selectedIndex;
+					var parcelas = parseInt(document.formVenda.numParcela[indice2].value);
+					var numero = valorTotal/parcelas;
+					document.getElementById('numParcelaF').value = numero;
+					document.getElementById('txtValorTotal').value = valorTotal +" R$";
+
 
 					var indice = parseInt(document.formVenda.slcFormaPagto.selectedIndex);
 					if(document.formVenda.slcFormPagto[indice].value == 1){
 						document.getElementById('txtFormaSelec').value = 'Boleto';
 					}
 					else if(document.formVenda.slcFormPagto[indice].value == 2){
-						document.getElementById('txtFormaSelec').value = 'aaaaaa';
-					}
-					else if(document.formVenda.slcFormPagto[indice].value == 3){
 						document.getElementById('txtFormaSelec').value = 'Transferência';
 					}
-					else if(document.formVenda.slcFormPagto[indice].value == 4){
-						document.getElementById('txtFormaSelec').value = 'Boletsdas';
+					else if(document.formVenda.slcFormPagto[indice].value == 3){
+						document.getElementById('txtFormaSelec').value = 'Crédito';
 					}
 
-					
 				}
 				function addProduto(){
-					var tabela = document.getElementById('tbProduto');
 
+
+					var tabela = document.getElementById('tbProduto');	
 					var td1 = document.createElement("td");
 					var td2 = document.createElement("td");
 					var td3 = document.createElement("td");
+					var td4 = document.createElement("td");
+					var td5 = document.createElement("td");
 					var tr = document.createElement("tr");
 					var cod =parseInt(document.getElementById('codProduto').value);
-					var indice2 = document.formVenda.numParcela.selectedIndex;
-					var parcelas = parseInt(document.formVenda.numParcela[indice2].value);
+
+
 
 					switch(cod){
 						case 1:
-						var descricao = 'Livro 1';
-						var preco = "500,00";
+						var codL = 1;
+						var descricao = ' O Corvo';
+						var preco = "35,00";
 						var qtde = document.getElementById("qtde").value;
 						valorTotal += (parseInt(qtde)*parseInt(preco));
-						var numero = valorTotal/parcelas;
 						break;
 						case 2:
-						var descricao = 'Livro 2';
-						var preco = "1250,00";
+						var codL = 2;
+						var descricao = 'Buraco Negro';
+						var preco = "35,00";
 						var qtde = document.getElementById('qtde').value;
 						valorTotal += (parseInt(qtde)*parseInt(preco));
-						var numero = valorTotal/parcelas;
 						break;
 						case 3:
-						var descricao = 'Livro 3';
-						var preco = "2000,00";
+						var codL = 3;
+						var descricao = 'Imaginário coletivo';
+						var preco = "49,00";
 						var qtde = document.getElementById('qtde').value;
 						valorTotal += (parseInt(qtde)*parseInt(preco));
-						var numero = valorTotal/parcelas;
 						break;
 						case 4:
-						var descricao = 'Livro 4';
-						var preco = "1250,00";
+						var codL = 4;
+						var descricao = 'Atômica';
+						var preco = "56,00";
 						var qtde = document.getElementById('qtde').value;
-						vvalorTotal += (parseInt(qtde)*parseInt(preco));
-						var numero = valorTotal/parcelas;
+						valorTotal += (parseInt(qtde)*parseInt(preco));
 						break;
 						case 5:
-						var descricao = 'Livro 5';
-						var preco = "1250,00";
+						var codL = 5;
+						var descricao = 'Ted Bundy';
+						var preco = "35,00";
 						var qtde = document.getElementById('qtde').value;
 						valorTotal += (parseInt(qtde)*parseInt(preco));
-						var numero = valorTotal/parcelas;
 						break;
 						case 6:
-						var descricao = 'Livro 6';
-						var preco = "1250,00";
+						var codL = 6;
+						var descricao = 'Lady Killers';
+						var preco = "28,00";
 						var qtde = document.getElementById('qtde').value;
 						valorTotal += (parseInt(qtde)*parseInt(preco));
-						var numero = valorTotal/parcelas;
 						break;
 						case 7:
-						var descricao = 'Livro 7';
-						var preco = "1250,00";
+						var codL = 7;
+						var descricao = 'A Noite dos Mortos Vivos';
+						var preco = "49,00";
 						var qtde = document.getElementById('qtde').value;
 						valorTotal += (parseInt(qtde)*parseInt(preco));
-						var numero = valorTotal/parcelas;
 						break;
 						case 8:
-						var descricao = 'Livro 8';
-						var preco = "1250,00";
+						var codL = 8;
+						var descricao = 'Psicose';
+						var preco = "56,00";
 						var qtde = document.getElementById('qtde').value;
 						valorTotal += (parseInt(qtde)*parseInt(preco));
-						var numero = valorTotal/parcelas;
 						break;
 						case 9:
-						var descricao = 'Livro 9';
-						var preco = "1250,00";
+						var codL = 9;
+						var descricao = 'Medo Clássico';
+						var preco = "56,00";
 						var qtde = document.getElementById('qtde').value;
 						valorTotal += (parseInt(qtde)*parseInt(preco));
-						var numero = valorTotal/parcelas;
 						break;
 						case 10:
-						var descricao = 'Livro 10';
-						var preco = "1250,00";
+						var codL = 10;
+						var descricao = 'Killer Clown';
+						var preco = "56,00";
 						var qtde = document.getElementById('qtde').value;
 						valorTotal += (parseInt(qtde)*parseInt(preco));
-						var numero = valorTotal/parcelas;
 						break;
 						case 11:
-						var descricao = 'Livro 11';
-						var preco = "1250,00";
+						var codL = 11;
+						var descricao = 'Hora do Pesaledo';
+						var preco = "60,00";
 						var qtde = document.getElementById('qtde').value;
 						valorTotal += (parseInt(qtde)*parseInt(preco));
-						var numero = valorTotal/parcelas;
 						break;
 						case 12:
-						var descricao = 'Livro 12';
-						var preco = "1250,00";
+						var codL = 12;
+						var descricao = 'Drácula';
+						var preco = "76,00";
 						var qtde = document.getElementById('qtde').value;
 						valorTotal += (parseInt(qtde)*parseInt(preco));
-						var numero = valorTotal/parcelas;
 						break;
 					}
+					document.getElementById('txtSub').value = valorTotal +"R$";
+					var valorfi = (parseInt(qtde)* parseInt(preco));
+					var codNode = document.createTextNode(codL);
 					var descricaoNode = document.createTextNode(descricao);
 					var precoNode = document.createTextNode(preco);
 					var qtdeNode = document.createTextNode(qtde);
-					document.getElementById('numParcelaF').value = numero;
+					var subNode = document.createTextNode(valorfi);
+					
 
-					td1.appendChild(descricaoNode);
-					td2.appendChild(precoNode);
-					td3.appendChild(qtdeNode);
+					td1.appendChild(codNode);
+					td2.appendChild(descricaoNode);
+					td3.appendChild(precoNode);
+					td4.appendChild(qtdeNode);
+					td5.appendChild(subNode);
 
 					tr.appendChild(td1);
 					tr.appendChild(td2);
 					tr.appendChild(td3);
+					tr.appendChild(td4);
+					tr.appendChild(td5);
 
 					tabela.appendChild(tr);
 
 					document.getElementById('codProduto').value = ' ';
 					document.getElementById('qtde').value = ' ';
-					document.getElementById('codProduto').focus(); 
-					document.getElementById('txtValorTotal').value = valorTotal;
+					document.getElementById('codProduto').focus();  
+
+				}
+				
+
+				function fMasc(objeto, mascara) {
+					obj = objeto
+					masc = mascara
+					setTimeout("fMascEx()", 1)
+				}
+				function fMascEx() {
+					obj.value = masc(obj.value)
+				}
+
+				function mCPF(cpf) {
+					cpf = cpf.replace(/\D/g, "")
+					cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2")
+					cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2")
+					cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2")
+					return cpf
 				}
 			</script>
 		</head>
 		<body> 
+			
+
+
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark a">
-				<a class="navbar-brand" href="index.html">Navbar</a>
+				<a class="navbar-brand " href="index.html">Home</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav">
-						<li class="nav-item active">
-							<a class="nav-link" href="Produtos.html">Produtos<span class="sr-only">(current)</span></a>
+						<li class="nav-item ">
+							<a class="nav-link " href="Produtos.html">Produtos<span class="sr-only">(current)</span></a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Features</a>
+						<li class="nav-item ">
+							<a class="nav-link" href="Quem_Somos.html">Quem Somos</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Pricing</a>
+							<li class="nav-item ">
+							<a class="nav-link" href="Fale_Conosco.html">Fale Conosco</a>
+						</li>
+						<li class="nav-item active ">
+							<a class="nav-link " href="Formulario.html">Compre Aqui</a>
 						</li>
 					</ul>
 				</div>
@@ -206,22 +259,22 @@
 							<div class="carousel-item active">
 								<img src="Img/Banner1.jpg" class="d-block w-100 tamanho" alt="...">
 								<div class="carousel-caption d-none d-md-block ">
-									<h5>First slide label</h5>
-									<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+									<h5>A Noite dos Mortos Vivos</h5>
+									<p>30% de desconto em um clássico desses<br>Vai deixar passar ?</p>
 								</div>
 							</div>
 							<div class="carousel-item">
 								<img src="Img/Banner2.jpg" class="d-block w-100 tamanho" alt="...">
 								<div class="carousel-caption d-none d-md-block">
-									<h5>Second slide label</h5>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									<h5>Medo Clássico</h5>
+									<p>Os contos do "Pai" do terror em uma versão definitiva<br>Compre agora ou “NUNCA MAIS”</p>
 								</div>
 							</div>
 							<div class="carousel-item">
 								<img src="Img/Banner3.jpg" class="tamanho d-block w-100 " alt="...">
 								<div class="carousel-caption d-none d-md-block">
-									<h5>Third slide label</h5>
-									<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+									<h5>Psicose</h5>
+									<p>Um das maiores obras do cinema agora em versão de luxo<br>Com 30% de desconto & 100% de qualidade</p>
 								</div>
 							</div>
 						</div>
@@ -239,76 +292,121 @@
 		</div>
 	</div>
 
-
-
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-10 col-lg-10 col-sm-10 col-10 jumper" style="margin-left: 2%;">
+			<div class="col-md-10 col-lg-10 col-sm-10 col-10 jumper">
 				<h1>Compre aqui </h1><p><b>Faça seu pedido e seu cadastro</b></p>
 			</div>
-			<form name="formVenda" class=""> 
-
-				<div class="col-md-12 col-lg-12 col-sm-12 col-12 jumper">
-					<p>Nome Social:
-						<input style="width: 70%;" type="text" id='txtNome'>
-						<p class="jumper">Código do produto do produto:
-							<input style="width: 20%;" type="text" id='codProduto'>
-							<p class="jumper">Número de parcelas:
-								<select class="forma" id='"numParcela' name="numParcela">
-											<option value='1'> 1</option>
-											<option value="2"> 2</option>
-											<option value="3"> 3</option>
-											<option value="4"> 4</option>
-											<option value="5"> 5</option>
-											<option value="6"> 6</option>
-										</select>
-								<p class="jumper">Quantidade:
-									<input style=" width: 20%;" type="text" id='qtde'>
-									<p class="jumper"> Escolha a forma de envio</p>
-									<h6><input type="radio" name="rdEntrega" name="rdEntrega" value="1" checked> Correio - entrega em 7 dias uteis (10,00 R$)<br>
-										<input type="radio" name="rdEntrega" name="rdEntrega" value="2"> SEDEX - entrega em 3 dias uteis (15,00 R$)<br>
-										<input type="radio" name="rdEntrega" name="rdEntrega" value="3"> A Retirar - retirar no endereço enviado ao seu email (5,00 R$)</h6>
-										<label class="jumper">Forma de pagamento:</label>
-										<select class="forma" id='slcFormaPagto' name="slcFormPagto">
-											<option value='1'> Boleto</option>
-											<option value="2"> Débito</option>
-											<option value="3"> Crédito</option>
-											<option value="4"> Transferência</option>
-										</select>
-									</p>
-								</p>
-							</p>
-
-							<input class="jumper4 botao" type="button" value='Adicionar ao carrinho' onclick="addProduto();">
-							<input class="forma" type="button" value="Finalizar pedido" onclick="salvar();">
-						</form>
-					</div>
-					<div class="col-md-12 col-lg-12 col-sm-12 col-12 jumper">
-						<p ><b>Seu carrinho de livros</b></p>
-						<table border='1' id='tbProduto'>
-							<thead>
-								<tr>
-									<th>Nome</th>
-									<th>Valor</th>
-									<th>qtde</th>
-								</tr>
-							</thead>
-						</table>
-
-
-						<hr style="background-color: white;">
-						<h1>Resumo da compra</h1>
-						<label>Cliente:</label>
-						<input style="width: 25%;" type="text" id="txtNomeCliente" name="txtNomeCliente" readonly="readonly" value="">
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-10 col-lg-10 col-sm-10 col-10 jumper">
+				<h3><b>Seus Dados</b></h3>
+			</div>
+				<div class="col-md-12 col-lg-10 col-sm-12 col-12 ">
+					<form name="formVenda" > 
+						<label>Nome Social</label>
+						<input style="width: 25%;" type="text" id='txtNome'>
+						<label style="margin-left: 2%;">CPF:</label>
+						<input type="text" id="txtcpf"  onkeydown="javascript: fMasc( this, mCPF );">
+						<label style="margin-left: 2%;">Email:</label>
+						<input style="width: 25%;" type="text" id='emai'>
+						<label>Código do produto:</label>
+						<input style="width: 5%;" type="text" id='codProduto'>
+						<label class="jumper">Quantidade:</label>
+						<input style=" width: 5%;" type="text" id='qtde'>
 						<br>
-						<label>Entrega selecionada:</label>
-						<input style="width: 25%;"type="text" id="txtEntregaSelec" name="txtEntregaSelec" readonly="readonly" value="">
-						<br>
-						<label>Preço de cada parcela arcelas:</label>
-						<input type="text" id="numParcelaF" name="numParcelaF" readonly="readonly" value="">
-						<br>
-						<label>Forma Pagamento:</label>
-						<input type="text" id="txtFormaSelec" name="txtFormaSelec" readonly="readonly" value="">
-						<br>
-						<label>Valor total:</label>
-						<input type="text" id="txtValorTotal" name="txtValorTotal" readonly="readonly" value="">
+						<label class="jumper"> Escolha a forma de envio</label>
+						<h6>
+							<input type="radio" name="rdEntrega" name="rdEntrega" value="1" checked> Correio - entrega em 7 dias uteis (10,00 R$)<br>
+							<input type="radio" name="rdEntrega" name="rdEntrega" value="2"> SEDEX - entrega em 3 dias uteis (25,00 R$)<br>
+							<input type="radio" name="rdEntrega" name="rdEntrega" value="3"> A Retirar - retirar no endereço enviado ao seu email (9,00 R$)
+						</h6>
+
+											<label >Forma de pagamento:</label>
+											<select class="forma" id='slcFormaPagto' name="slcFormPagto">
+												<option value='1'> Boleto</option>
+												<option value="2"> Transferência</option>
+												<option value="3"> Crédito</option>
+											</select>
+											<br>
+											<label>Número de parcelas:</label>
+												<select class="forma"  id='"numParcela' name="numParcela">
+													<option value='1'> 1 </option>
+													<option value="2"> 2 </option>
+													<option value="3"> 3 </option>
+													<option value="4"> 4 </option>
+													<option value="5"> 5 </option>
+													<option value="6"> 6 </option>
+												</select>
+												<br>
+									<input class="forma" type="button" value='Adicionar ao carrinho' onclick="addProduto();">
+									<input class="forma" type="button" value="Finalizar pedido" onclick="salvar();parcely();">
+								</form>
+							</div>
+							<div class="col-md-12 col-lg-12 col-sm-12 col-12 ">
+								<p ><b>Seu carrinho de livros</b></p>
+								<table border='1' id='tbProduto'>
+									<thead>
+										<tr>
+											<th>Id</th>
+											<th>Nome</th>
+											<th>Sub Total</th>
+											<th>qtde</th>
+											<th>Valor Total</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+							<div class="col-md-12 col-lg-12 col-sm-12 col-12 ">
+
+
+								<hr style="background-color: white;">
+								<h1>Resumo da compra</h1>
+								<label>Cliente:</label>
+								<input style="width: 25%;" type="text" id="txtNomeCliente" name="txtNomeCliente" readonly="readonly" placeholder="Nome">
+								<br>
+								<label>Entrega selecionada:</label>
+								<input style="width: 25%;"type="text" id="txtEntregaSelec" name="txtEntregaSelec" readonly="readonly" placeholder="Entrega">
+								<br>
+								<label>Valor Frete:</label>
+								<input style="width: 25%;"type="text" id="txtFrete" name="txtFrete" readonly="readonly" placeholder="Valor Frete">
+								<br>
+								<label>Sub total:</label>
+								<input style="width: 25%;"type="text" id="txtSub" name="txtSub" readonly="readonly" placeholder="Sub Total">
+								<br>
+								<label>Preço de cada parcela:</label>
+								<input type="text" id="numParcelaF" name="numParcelaF" readonly="readonly" placeholder="Parcelas">
+								<br>
+								<label>Forma Pagamento:</label>
+								<input type="text" id="txtFormaSelec" name="txtFormaSelec" readonly="readonly" placeholder="Forma de Pagamento">
+								<br>
+								<label>Valor total:</label>
+								<input type="text" id="txtValorTotal" name="txtValorTotal" readonly="readonly" placeholder="Total">
+							</div>
+								<div class="container-fluid">
+		<div class="row">
+			<footer class="jumper">
+				<center>
+					<h4 class="jumper5">Copyright © André && Gustavo </h4>
+					<img src="Img/Roda1.svg" height="60">
+					<img src="Img/Roda2.svg" height="60">
+					<img src="Img/Roda3.svg" height="60">
+					<img src="Img/Roda4.svg" height="60">
+				</center>
+			</footer>
+		</div>
+	</div>
+</body>
+</html>
+
+						</p>
+					</p>
+				</p>
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+</nav>

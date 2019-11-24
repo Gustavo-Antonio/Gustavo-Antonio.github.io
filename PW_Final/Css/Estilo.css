@@ -41,6 +41,7 @@ label{
 input[type=text]{
  border-radius:4px;
  font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
+ color: black;
  }
 
 
@@ -55,6 +56,10 @@ tr{
 	color: white;
 	background-color:white. 
 }
+iframe{
+	width: 100%;
+}
+
 .botao{
 	border-radius: 8px;
 }
@@ -126,7 +131,6 @@ tr{
 	font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
 }
 .forma{
-	margin-left: 4%;
 	border-radius: 8px;
 }
 
@@ -145,8 +149,16 @@ tr{
 .jumper4{
 	margin-left: 5%;
 }
+.jumper5{
+	margin-top: 3%;
+}
 
-
+.jumper6{
+	margin-left: 17%;
+}
+.jumper7{
+	margin-left: 20%;
+}
 
 ::-webkit-scrollbar-track {
 	background-color: #41454a;
